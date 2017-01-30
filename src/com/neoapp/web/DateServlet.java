@@ -11,30 +11,21 @@ import java.io.PrintWriter;
 
 import java.util.Date;
 
-public class DateServlet extends HttpServlet
-{
- /**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
+public class DateServlet extends HttpServlet {
 
-public void doGet(HttpServletRequest request, HttpServletResponse response)
-    throws ServletException, IOException
-    {
-        response.setContentType("text/html");
-        PrintWriter out = response.getWriter();
-        out.println("<HTML>");
-        out.println("<HEAD><TITLE> Date Demo </TITLE></HEAD>");
-        out.println("<BODY>");
+	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		response.setContentType("text/html");
+		PrintWriter out = response.getWriter();
+		out.println("<HTML>");
+		out.println("<HEAD><TITLE> Date Demo </TITLE></HEAD>");
+		out.println("<BODY>");
 
-        Date date = new Date();
-        String dateStr = date.toString();
+		Date date = new Date();
+		String dateStr = date.toString();
 
-        out.println("<h1>"+dateStr+"</h1>");
+		out.println("<h1>" + dateStr + "</h1>");
 
-        out.println("</BODY>");
-        out.println("</HTML>");
-    }
+		out.println("</BODY>");
+		out.println("</HTML>");
+	}
 }
-
-

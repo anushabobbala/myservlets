@@ -8,16 +8,13 @@ import java.io.IOException;
 
 import javax.servlet.ServletException;
 
-public class RedirectServlet extends HttpServlet
-{
-    public void doGet(HttpServletRequest request, HttpServletResponse response)
-      throws ServletException
-    {
-        try {
+public class RedirectServlet extends HttpServlet {
+	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException {
+		try {
 			response.sendRedirect("date");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-    }
+	}
 }
