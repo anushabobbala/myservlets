@@ -9,65 +9,113 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  
   <servlet>
-    <servlet-name>Hello</servlet-name> 
-    <servlet-class>com.neoapp.web.HelloServlet</servlet-class> 
+    <servlet-name>Hello</servlet-name>
+    <servlet-class>com.neoapp.web.HelloServlet</servlet-class>
   </servlet>
-
   <servlet-mapping>
-    <servlet-name>Hello</servlet-name> 
-    <url-pattern>/servlets/hi</url-pattern> 
+    <servlet-name>Hello</servlet-name>
+    <url-pattern>/servlets/hi</url-pattern>
   </servlet-mapping>
-  
   <servlet>
-    <servlet-name>Form</servlet-name> 
-    <servlet-class>FormServlet</servlet-class> 
+    <servlet-name>Form</servlet-name>
+    <servlet-class>FormServlet</servlet-class>
   </servlet>
-
   <servlet-mapping>
-    <servlet-name>Form</servlet-name> 
-    <url-pattern>/servlets/form</url-pattern> 
+    <servlet-name>Form</servlet-name>
+    <url-pattern>/servlets/form</url-pattern>
   </servlet-mapping>
-  
-  
   <servlet>
-    <servlet-name>NeoAppDate</servlet-name> 
-    <servlet-class>com.neoapp.web.DateServlet</servlet-class> 
+    <servlet-name>NeoAppDate</servlet-name>
+    <servlet-class>com.neoapp.web.DateServlet</servlet-class>
   </servlet>
-
   <servlet-mapping>
-    <servlet-name>NeoAppDate</servlet-name> 
-    <url-pattern>/servlets/date</url-pattern> 
+    <servlet-name>NeoAppDate</servlet-name>
+    <url-pattern>/servlets/date</url-pattern>
   </servlet-mapping>
-  
   <servlet>
-  <servlet-name>Redirect</servlet-name> 
-    <servlet-class>com.neoapp.web.RedirectServlet</servlet-class> 
+    <servlet-name>Redirect</servlet-name>
+    <servlet-class>com.neoapp.web.RedirectServlet</servlet-class>
   </servlet>
-   <servlet-mapping>
-    <servlet-name>Redirect</servlet-name> 
-    <url-pattern>/servlets/redirect</url-pattern> 
-  </servlet-mapping>
-
-
-  <servlet>
-    <servlet-name>Emp</servlet-name> 
-    <servlet-class>com.neoapp.web.EmployeeServlet</servlet-class> 
-  </servlet>
-
   <servlet-mapping>
-    <servlet-name>Emp</servlet-name> 
-    <url-pattern>/servlets/emp</url-pattern> 
+    <servlet-name>Redirect</servlet-name>
+    <url-pattern>/servlets/redirect</url-pattern>
   </servlet-mapping>
-  
   <servlet>
-      <servlet-name>Login</servlet-name>
-      <servlet-class>LoginServlet</servlet-class>
+    <servlet-name>Emp</servlet-name>
+    <servlet-class>com.neoapp.web.EmployeeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Emp</servlet-name>
+    <url-pattern>/servlets/emp</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Login</servlet-name>
+    <servlet-class>LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Display</servlet-name>
+    <servlet-class>DisplayServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Login</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Display</servlet-name>
+    <url-pattern>/display</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Controller</servlet-name>
+    <servlet-class>ControllerServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>View1</servlet-name>
+    <servlet-class>ViewServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Header</servlet-name>
+    <servlet-class>HeaderServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Body</servlet-name>
+    <servlet-class>BodyServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Fotter</servlet-name>
+    <servlet-class>FotterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Header</servlet-name>
+    <url-pattern>/neoapp/header</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Body</servlet-name>
+    <url-pattern>/servlet/page</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Fotter</servlet-name>
+    <url-pattern>/neoapp/fotter</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ConfigDemo</servlet-name>
+    <servlet-class>ConfigDemoServlet</servlet-class>
+    <init-param>
+      <param-name>email</param-name>
+      <param-value>info@neoapp.com</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ConfigDemo</servlet-name>
+    <url-pattern>/servlets/config</url-pattern>
+  </servlet-mapping>
+  <servlet>
+      <servlet-name>LoginC</servlet-name>
+      <servlet-class>LoginCServletC</servlet-class>
     </servlet>
     <servlet>
-      <servlet-name>Display</servlet-name>
-      <servlet-class>DisplayServlet</servlet-class>
+      <servlet-name>DisplayC</servlet-name>
+      <servlet-class>DisplayCServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -78,7 +126,47 @@
         <servlet-name>Display</servlet-name>
         <url-pattern>/display</url-pattern>
     </servlet-mapping>
-  
+     <servlet>
+      <servlet-name>LoginS</servlet-name>
+      <servlet-class>LoginSServlet</servlet-class>
+    </servlet>
+    <servlet>
+      <servlet-name>DisplayS</servlet-name>
+      <servlet-class>DisplaySServlet</servlet-class>
+    </servlet>
 
+    <servlet-mapping>
+        <servlet-name>Login</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Display</servlet-name>
+        <url-pattern>/display</url-pattern>
+    </servlet-mapping>
+    <servlet>
+  <servlet-name>Logout</servlet-name> 
+      <servlet-class>LogoutServlet</servlet-class> 
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>Logout</servlet-name> 
+      <url-pattern>/logout</url-pattern> 
+    </servlet-mapping>
+    <servlet>
+    <servlet-name>Controller</servlet-name> 
+    <servlet-class>ControllerServlet</servlet-class> 
+  </servlet>
+  <servlet>
+    <servlet-name>View1</servlet-name> 
+    <servlet-class>ViewServlet</servlet-class> 
+  </servlet>
 
+  <servlet-mapping>
+    <servlet-name>Controller</servlet-name> 
+    <url-pattern>/neoapp/controller</url-pattern> 
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>View1</servlet-name> 
+    <url-pattern>/view/v1</url-pattern> 
+  </servlet-mapping>
+    
 </web-app>
