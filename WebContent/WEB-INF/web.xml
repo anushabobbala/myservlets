@@ -12,7 +12,8 @@
 		<welcome-file>default.htm</welcome-file>
 		<welcome-file>default.jsp</welcome-file>
 	</welcome-file-list>
-
+  
+  
 	<servlet>
 		<servlet-name>Hello</servlet-name>
 		<servlet-class>com.neoapp.web.HelloServlet</servlet-class>
@@ -57,6 +58,16 @@
 		<servlet-name>Emp</servlet-name>
 		<url-pattern>/servlets/emp</url-pattern>
 	</servlet-mapping>
+	
+	 <servlet>
+    <servlet-name>Forward</servlet-name> 
+    <servlet-class>ForwardServlet</servlet-class> 
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Forward</servlet-name> 
+    <url-pattern>/servlet/forward</url-pattern> 
+  </servlet-mapping>
+
 
 	<servlet>
 		<servlet-name>Login</servlet-name>
