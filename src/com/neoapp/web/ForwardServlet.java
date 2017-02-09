@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public class ForwardServlet extends HttpServlet {
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		RequestDispatcher rd = request.getRequestDispatcher("../neoapp/date");
+		RequestDispatcher rd = request.getRequestDispatcher("/servlets/date");
 		rd.forward(request, response);
 	}
 }

@@ -11,12 +11,12 @@ public class Model {
 		DB dbObj = new DB();
 		Connection con = dbObj.getConnection();
 		Statement stmt = con.createStatement();
-		String query = "select * from emp where eno='" + no + "'";
+		String query = "select * from emp where employeenumber='" + no + "'";
 		ResultSet rs = stmt.executeQuery(query);
 		if (rs.next()) {
-			no = rs.getString("eno");
-			String name = rs.getString("ename");
-			float sal = rs.getFloat("esal");
+			no = rs.getString("employeenumber");
+			String name = rs.getString("employeename");
+			float sal = rs.getFloat("salary");
 
 			Emp obj = new Emp();
 			obj.setNo(no);

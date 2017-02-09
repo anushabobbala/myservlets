@@ -8,7 +8,7 @@ import javax.servlet.http.*;
 public class LoginServlet extends HttpServlet {
 
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-		String userName = request.getParameter("uname");
+		String userName = request.getParameter("unam");
 
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();

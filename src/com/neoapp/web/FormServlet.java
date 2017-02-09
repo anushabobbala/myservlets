@@ -11,14 +11,14 @@ import java.io.PrintWriter;
 public class FormServlet extends HttpServlet {
 	public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
 		// Reading the HTML Form Parameters
-		String firstName = req.getParameter("firstname");
-		String lastName = req.getParameter("lastname");
+		String first = req.getParameter("firstname");
+		String last = req.getParameter("lastname");
 
 		res.setContentType("text/html");
 		PrintWriter out = res.getWriter();
 		out.println("<HTML><HEAD><TITLE>Form Demo</TITLE></HEAD><BODY>");
-		out.println("<H3>First Name =" + firstName + "</H3>");
-		out.println("<H3>Last Name =" + lastName + "</H3>");
+		out.println("<H3>First Name =" + first + "</H3>");
+		out.println("<H3>Last Name =" + last + "</H3>");
 		out.println("</BODY></HTML>");
 	}
 }

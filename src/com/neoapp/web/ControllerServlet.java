@@ -10,7 +10,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public class ControllerServlet extends HttpServlet {
+	
+	@Override
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+			doPost(request, response);
+	}
+	
+	@Override
+	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// Read input (emp no) from Browser
 		String no = request.getParameter("eno");
 
@@ -27,7 +35,8 @@ public class ControllerServlet extends HttpServlet {
 		request.setAttribute("emp", empBean);
 
 		// Forward the modified request to the View
-		RequestDispatcher rd = request.getRequestDispatcher("../view/v1");
+		RequestDispatcher rd = request.getRequestDispatcher("view");
 		rd.forward(request, response);
 	}
+	
 }

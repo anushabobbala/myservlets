@@ -18,12 +18,12 @@ public class BodyServlet extends HttpServlet
       out.println("<HEAD><TITLE> A Title to this body</TITLE></HEAD>");
       out.println("<BODY>");
 
-      RequestDispatcher rd1 =request.getRequestDispatcher("../neoapp/header");
+      RequestDispatcher rd1 =request.getRequestDispatcher("header");
       rd1.include(request,response);
 
       out.println("<H1> I'm the Body of this Page </H1>");
 
-      RequestDispatcher rd2 =request.getRequestDispatcher("../neoapp/fotter");
+      RequestDispatcher rd2 =request.getRequestDispatcher("fotter");
       rd2.include(request,response);
 
       out.println("</BODY> </HTML>");
